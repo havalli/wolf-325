@@ -9,7 +9,7 @@ from homeassistant.core import HomeAssistant, ServiceCall, SupportsResponse
 from homeassistant.exceptions import ServiceValidationError
 from homeassistant.helpers import config_validation as cv
 
-from wolf_325 import ProfileChanges, ProfileError
+from ._vendor.wolf_325 import ProfileChanges, ProfileError
 
 from .const import DOMAIN
 from .mutations import publish_confirmed_state

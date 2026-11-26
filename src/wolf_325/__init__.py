@@ -1,5 +1,7 @@
 """Async Modbus control for WOLF CWL-2-325 ventilation appliances."""
 
+__version__ = "0.1.2"
+
 from .catalogue import (
     READ_BLOCKS,
     REGISTER_ALIASES,

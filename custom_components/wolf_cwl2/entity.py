@@ -6,8 +6,8 @@ from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity import EntityCategory
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from wolf_325 import REGISTERS
-from wolf_325.derived_values import VIRTUAL_VALUES
+from ._vendor.wolf_325 import REGISTERS
+from ._vendor.wolf_325.derived_values import VIRTUAL_VALUES
 
 from .const import DOMAIN
 from .coordinator import WolfCWL2Coordinator

@@ -14,7 +14,7 @@ from pytest_homeassistant_custom_component.common import MockConfigEntry
 from custom_components.wolf_cwl2.const import DOMAIN
 from custom_components.wolf_cwl2.coordinator import WolfCWL2Coordinator
 from custom_components.wolf_cwl2.storage import EntryStore
-from wolf_325 import DEFAULT_CONFIG, WolfCWL2
+from custom_components.wolf_cwl2._vendor.wolf_325 import DEFAULT_CONFIG, WolfCWL2
 
 from .fakes import FakeGateway
 from .test_config_flow import CONNECTION, DEFAULT_OPTIONS

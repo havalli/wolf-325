@@ -6,7 +6,7 @@ from typing import Any
 
 from homeassistant.exceptions import HomeAssistantError, ServiceValidationError
 
-from wolf_325 import (
+from ._vendor.wolf_325 import (
     BulkWriteError,
     CommunicationError,
     RegisterError,

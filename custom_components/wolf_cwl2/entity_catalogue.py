@@ -6,8 +6,8 @@ from dataclasses import dataclass
 from types import MappingProxyType
 from typing import Final, Literal
 
-from wolf_325 import REGISTERS, RegisterDef
-from wolf_325.derived_values import VIRTUAL_VALUES, VirtualValueDef
+from ._vendor.wolf_325 import REGISTERS, RegisterDef
+from ._vendor.wolf_325.derived_values import VIRTUAL_VALUES, VirtualValueDef
 
 EntityPlatform = Literal["action", "number", "select", "sensor", "switch"]
 EntityCategoryName = Literal["config", "diagnostic"]

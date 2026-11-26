@@ -9,7 +9,11 @@ from pathlib import Path
 from typing import Any, Final
 
 from homeassistant.core import HomeAssistant
-from wolf_325 import MemoryProfileRepository, ProfileRepository, normalize_settings
+from ._vendor.wolf_325 import (
+    MemoryProfileRepository,
+    ProfileRepository,
+    normalize_settings,
+)
 
 from .const import DOMAIN
 from .storage_backend import MigratingEntryDataStore

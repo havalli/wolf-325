@@ -14,7 +14,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
-from wolf_325 import CommunicationError, WolfCWL2
+from ._vendor.wolf_325 import CommunicationError, WolfCWL2
 
 from .const import (
     CONF_FAST_INTERVAL,

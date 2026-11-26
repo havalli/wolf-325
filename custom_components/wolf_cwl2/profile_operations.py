@@ -6,7 +6,12 @@ import logging
 
 from homeassistant.exceptions import HomeAssistantError, ServiceValidationError
 
-from wolf_325 import BulkWriteError, CommunicationError, ProfileError, RegisterError
+from ._vendor.wolf_325 import (
+    BulkWriteError,
+    CommunicationError,
+    ProfileError,
+    RegisterError,
+)
 
 from .const import DOMAIN
 from .mutations import publish_confirmed_state

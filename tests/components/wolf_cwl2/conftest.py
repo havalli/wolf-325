@@ -21,7 +21,7 @@ def fake_gateway(monkeypatch: pytest.MonkeyPatch) -> Iterator[FakeGateway]:
     """
     gateway = FakeGateway()
     monkeypatch.setattr(
-        "wolf_325.transport.AsyncModbusTcpClient",
+        "custom_components.wolf_cwl2._vendor.wolf_325.transport.AsyncModbusTcpClient",
         gateway.construct_client,
     )
     yield gateway

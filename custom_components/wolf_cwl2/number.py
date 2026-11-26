@@ -6,7 +6,7 @@ from homeassistant.components.number import NumberEntity, NumberMode
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
-from wolf_325 import REGISTERS
+from ._vendor.wolf_325 import REGISTERS
 
 from .entity import WolfCWL2Entity
 from .entity_catalogue import ENTITY_SPECS, EntitySpec

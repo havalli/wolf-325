@@ -2,7 +2,7 @@
 
 from homeassistant.core import HomeAssistant
 
-from wolf_325 import WolfCWL2
+from custom_components.wolf_cwl2._vendor.wolf_325 import WolfCWL2
 
 
 def test_home_assistant_and_client_import_together() -> None:
@@ -12,7 +12,7 @@ def test_home_assistant_and_client_import_together() -> None:
         None.
     """
     assert HomeAssistant.__module__ == "homeassistant.core"
-    assert WolfCWL2.__module__ == "wolf_325.controller"
+    assert WolfCWL2.__module__.endswith("wolf_325.controller")
 
 
 def test_home_assistant_fixture_is_available(hass: HomeAssistant) -> None:

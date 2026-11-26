@@ -13,7 +13,7 @@ from .register import ReadBlock, RegisterDef
 
 def _load_catalogue() -> dict[str, Any]:
     """Read packaged register metadata generated from the reference implementation."""
-    resource = files("wolf_325").joinpath("register_catalogue.json")
+    resource = files(__package__).joinpath("register_catalogue.json")
     return json.loads(resource.read_text(encoding="utf-8"))
 
 

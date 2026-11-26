@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from wolf_325 import REGISTERS
-from wolf_325.derived_values import VIRTUAL_VALUES
+from custom_components.wolf_cwl2._vendor.wolf_325 import REGISTERS
+from custom_components.wolf_cwl2._vendor.wolf_325.derived_values import VIRTUAL_VALUES
 
 from custom_components.wolf_cwl2.entity_catalogue import (
     ACTION_ONLY_KEYS,

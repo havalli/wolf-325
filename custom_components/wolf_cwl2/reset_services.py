@@ -9,7 +9,7 @@ from homeassistant.core import HomeAssistant, ServiceCall, SupportsResponse
 from homeassistant.exceptions import HomeAssistantError, ServiceValidationError
 from homeassistant.helpers import config_validation as cv
 
-from wolf_325 import CommunicationError, RegisterError
+from ._vendor.wolf_325 import CommunicationError, RegisterError
 
 from .const import CONF_ALLOW_APPLIANCE_RESET, DOMAIN
 from .service_helpers import CONF_CONFIG_ENTRY_ID, runtime_for

@@ -7,7 +7,7 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from typing import Any
 
-from wolf_325 import CommunicationError, DEFAULT_CONFIG, WolfCWL2, WolfError
+from ._vendor.wolf_325 import CommunicationError, DEFAULT_CONFIG, WolfCWL2, WolfError
 
 
 class CannotConnect(RuntimeError):

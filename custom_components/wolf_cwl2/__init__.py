@@ -11,7 +11,7 @@ from homeassistant.exceptions import ConfigEntryError
 from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.typing import ConfigType
 
-from wolf_325 import WolfCWL2
+from ._vendor.wolf_325 import WolfCWL2
 
 from .const import CONF_ALLOW_APPLIANCE_RESET, CONF_AUTHORITY, DEFAULT_OPTIONS, DOMAIN
 from .coordinator import WolfCWL2Coordinator

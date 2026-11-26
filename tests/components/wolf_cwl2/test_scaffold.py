@@ -68,7 +68,7 @@ def test_manifest_and_custom_translation_are_complete() -> None:
         "iot_class": "local_polling",
         "issue_tracker": "https://github.com/JulianKimmig/wolf-325/issues",
         "name": "WOLF CWL-2",
-        "requirements": ["wolf-325==0.1.2"],
+        "requirements": ["pymodbus>=3.11.2,<3.15"],
         "version": "0.1.2",
     }
 
@@ -79,7 +79,7 @@ def test_manifest_and_custom_translation_are_complete() -> None:
 
 
 def test_manifest_versions_match_main_package() -> None:
-    """Keep the HACS release and exact client dependency synchronized.
+    """Keep the HACS release version synchronized with the main package.
 
     Returns:
         None.
@@ -91,7 +91,29 @@ def test_manifest_versions_match_main_package() -> None:
     manifest = _read_json(COMPONENT_ROOT / "manifest.json")
 
     assert manifest["version"] == project_version
-    assert manifest["requirements"] == [f"wolf-325=={project_version}"]
+    assert manifest["requirements"] == ["pymodbus>=3.11.2,<3.15"]
+
+
+def test_vendored_client_matches_main_package() -> None:
+    """Keep the HACS-test client copy synchronized with the reusable client."""
+    source = REPOSITORY_ROOT / "src" / "wolf_325"
+    vendored = COMPONENT_ROOT / "_vendor" / "wolf_325"
+    source_files = {
+        path.relative_to(source)
+        for path in source.rglob("*")
+        if path.is_file() and "__pycache__" not in path.parts
+    }
+    vendored_files = {
+        path.relative_to(vendored)
+        for path in vendored.rglob("*")
+        if path.is_file() and "__pycache__" not in path.parts
+    }
+
+    assert vendored_files == source_files
+    for relative_path in source_files:
+        assert (vendored / relative_path).read_bytes() == (
+            source / relative_path
+        ).read_bytes()
 
 
 def test_yaml_and_service_metadata_match_config_entry_only_contract() -> None:

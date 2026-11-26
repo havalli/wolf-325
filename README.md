@@ -63,6 +63,13 @@ passes both HACS repository validation and Home Assistant hassfest. The project
 is licensed under MIT with Julian Kimmig as author, copyright holder, and
 GitHub code owner.
 
+This feature-testing branch deliberately vendors a copy of the client at
+`custom_components/wolf_cwl2/_vendor/wolf_325` and declares only PyModbus in
+the Home Assistant manifest. This makes a fork installable through HACS without
+publishing a temporary `wolf-325` package to PyPI. The upstream release layout
+remains the separately versioned `wolf-325` PyPI distribution plus the Home
+Assistant integration.
+
 For repository development:
 
 ```bash

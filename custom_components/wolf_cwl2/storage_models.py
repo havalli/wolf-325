@@ -6,7 +6,7 @@ import copy
 from collections.abc import Mapping
 from typing import Any, Final
 
-from wolf_325 import example_profile_documents, normalize_settings
+from ._vendor.wolf_325 import example_profile_documents, normalize_settings
 
 from .const import AUTHORITY_MODES
 

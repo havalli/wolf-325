@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-from importlib.metadata import version
 from typing import Any, Final
 
 from homeassistant.components.diagnostics import async_redact_data
@@ -23,6 +22,7 @@ from .const import (
     DOMAIN,
 )
 from .runtime import WolfCWL2ConfigEntry
+from ._vendor.wolf_325 import __version__ as client_version
 
 REDACT_KEYS: Final = {
     "address_offset",
@@ -70,7 +70,7 @@ async def async_get_config_entry_diagnostics(
     data: dict[str, Any] = {
         "versions": {
             "integration": integration.version,
-            "client": version("wolf-325"),
+            "client": client_version,
         },
         "policy": {
             "authority": policy[CONF_AUTHORITY],

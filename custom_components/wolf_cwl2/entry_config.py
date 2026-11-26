@@ -6,7 +6,7 @@ import copy
 from collections.abc import Mapping
 from typing import Any
 
-from wolf_325 import DEFAULT_CONFIG
+from ._vendor.wolf_325 import DEFAULT_CONFIG
 
 from .const import (
     CONF_AUTHORITY,

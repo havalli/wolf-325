@@ -16,7 +16,10 @@ from custom_components.wolf_cwl2.diagnostics import (
     async_get_config_entry_diagnostics,
     async_get_device_diagnostics,
 )
-from wolf_325 import CommunicationError, DEFAULT_CONFIG
+from custom_components.wolf_cwl2._vendor.wolf_325 import (
+    CommunicationError,
+    DEFAULT_CONFIG,
+)
 
 from .fakes import FakeGateway
 from .test_config_flow import CONNECTION, DEFAULT_OPTIONS

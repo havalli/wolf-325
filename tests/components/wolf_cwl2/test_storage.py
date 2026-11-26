@@ -13,7 +13,7 @@ from custom_components.wolf_cwl2.storage_models import (
     STORE_SCHEMA_VERSION,
     new_store_payload,
 )
-from wolf_325 import DEFAULT_CONFIG
+from custom_components.wolf_cwl2._vendor.wolf_325 import DEFAULT_CONFIG
 
 
 async def test_home_assistant_store_preserves_payload_shape(

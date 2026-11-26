@@ -9,7 +9,7 @@ from typing import TypeAlias
 
 from homeassistant.config_entries import ConfigEntry
 
-from wolf_325 import WolfCWL2
+from ._vendor.wolf_325 import WolfCWL2
 
 from .coordinator import WolfCWL2Coordinator
 from .storage import EntryStore

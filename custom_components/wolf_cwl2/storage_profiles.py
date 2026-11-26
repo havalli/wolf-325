@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Awaitable, Callable, Mapping
 
-from wolf_325 import MemoryProfileRepository, ProfileRepository
+from ._vendor.wolf_325 import MemoryProfileRepository, ProfileRepository
 
 ProfileSaveCallback = Callable[[dict[str, dict[str, object]]], Awaitable[None]]
 

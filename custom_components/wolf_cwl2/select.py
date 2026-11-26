@@ -8,7 +8,7 @@ from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from wolf_325 import REGISTERS
+from ._vendor.wolf_325 import REGISTERS
 
 from .entity import WolfCWL2Entity
 from .entity_catalogue import ENTITY_SPECS, EntitySpec
